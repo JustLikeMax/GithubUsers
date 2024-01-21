@@ -20,7 +20,7 @@ const App = () => {
       try {
         if (username.length >= 4) {
           const response = await fetch(
-            `http://localhost:5000/api/search/${username}`
+            `https://search-github-backend.onrender.com/api/search/${username}`
           );
           if (response.ok) {
             const data = await response.json();
@@ -41,7 +41,9 @@ const App = () => {
 
   const fetchUserData = async (user: string) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/user/${user}`);
+      const response = await fetch(
+        `https://search-github-backend.onrender.com/api/user/${user}`
+      );
       if (response.ok) {
         const data = await response.json();
         setUserData(data);
