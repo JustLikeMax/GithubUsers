@@ -13,7 +13,8 @@ app.use(cors());
 function checkAddress(req, res, next) {
   const allowedOrigins = [
     "http://localhost:5173",
-    "https://search-github.vercel.app/",
+    "https://search-github-afc.vercel.app",
+    "https://search-github-afc.vercel.app/",
   ];
 
   const referrer = req.get("Referrer");
