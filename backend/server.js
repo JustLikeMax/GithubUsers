@@ -33,7 +33,11 @@ app.get("/api/user/:username", checkAddress, async (req, res) => {
   try {
     const { username } = req.params;
     const githubApiUrl = `https://api.github.com/users/${username}`;
-    const response = await axios.get(githubApiUrl);
+    const response = await axios.get(githubApiUrl, {
+      headers: {
+        Authorization: `Bearer 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`,
+      },
+    });
 
     if (response.status === 200) {
       res.json(response.data);
