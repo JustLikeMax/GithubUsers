@@ -46,6 +46,7 @@ const App = () => {
       );
       if (response.ok) {
         const data = await response.json();
+        console.log("DATA: " + JSON.stringify(data));
         setUserData(data);
       } else {
         alert("Benutzer nicht gefunden. Bitte überprüfe den Benutzernamen.");
